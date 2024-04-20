@@ -14,3 +14,14 @@ Note: I (and a nice AI assistant because im too lazy to make this random thought
 
 
 Download the .vsix in releases, I dont expect to update this often once this is released.
+
+
+## Config
+
+To edit the config:
+
+Open the Command Palette (Ctrl + Shift + P) and type in Configure InstaLib
+
+This will send you to the config for InstaLib, all fields are required in order for it to work properly.
+
+Because this was made for me only, I figured to add no checks for invalid stuff, so if something doesnt work, then its most likely invalid information (token,repo,owner, or filePath).
