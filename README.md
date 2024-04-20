@@ -1,5 +1,7 @@
 # Instalib README
 
+Export SELECTED code snippets to github repo files. (In a super simple and janky way!)
+
 Note: I (and a nice AI assistant because im too lazy to make this random thought project myself) was made for my own needs, and this will only be changed/made for my needs. This is only open source because this may be useful for others.
 
 ## Extension Settings *(All Required)*
