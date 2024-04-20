@@ -4,7 +4,7 @@ Note: I (and a nice AI assistant because im too lazy to make this random thought
 
 ## Extension Settings *(All Required)*
 
-*Github Access Token* : This is used to access github's API and append code to selected files. If you dont know how to get/create one, [visit this link./](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+*Github Access Token* : This is used to access github's API and append code to selected files. If you dont know how to get/create one, [visit this link.](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 *Owner* : This is your name on github
 
