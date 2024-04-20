@@ -4,7 +4,6 @@ import * as vscode from 'vscode';
 
 import axios from 'axios'
 
-
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -16,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Get configuration settings
 	const config = vscode.workspace.getConfiguration('instalib');
 
-	let accessToken = config.get('accessToken');
+	let accessToken = config.get('accessToken')
 	let owner = config.get('owner');
 	let repo = config.get('repo');
 	let filePath = config.get('filePath');
@@ -69,18 +68,29 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.window.showErrorMessage(`Error while exporting code to ${repo}: ${error}`);
 		}
 	}
+
 	// Blah blah blah shit registering
 	let disposable = vscode.commands.registerCommand('instalib.helloWorld', () => {
 		const editor = vscode.window.activeTextEditor;
-	
-		vscode.window.showInformationMessage('Attempting to export code to ' + repo + " //" + filePath);
-		if(editor) {
-			const selectedText = editor.document.getText(editor.selection)
-			appendToGitHubFile(selectedText);
-		}
+
+				vscode.window.showInformationMessage('Attempting to export code to ' + repo + " // " + filePath);
+
+				if(editor) {
+					let selectedText = editor.document.getText(editor.selection)
+					appendToGitHubFile(selectedText);
+				} else {	
+					vscode.window.showErrorMessage('Error while trying to find selected code.');
+				}
 	});
 
 	context.subscriptions.push(disposable);
+
+	disposable = vscode.commands.registerCommand('instalib.configInstaLib', () => {
+			vscode.commands.executeCommand('workbench.action.openSettings', '@ext:ugecko.instaLib');
+	});
+
+	context.subscriptions.push(disposable);
+
 }
 
 // This method is called when your extension is deactivated

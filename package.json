@@ -1,5 +1,6 @@
 {
   "name": "instalib",
+  "publisher": "ugecko",
   "displayName": "instaLib",
   "description": "Send code snippets to a github file and/or library",
   "version": "0.0.1",
@@ -16,6 +17,10 @@
       {
         "command": "instalib.helloWorld",
         "title": "-- Export to github library --"
+      },
+      {
+        "command": "instalib.configInstaLib",
+        "title" : "Configurate InstaLib"
       }
     ],
     "menus": {
