@@ -15,10 +15,43 @@
     "commands": [
       {
         "command": "instalib.helloWorld",
-        "title": "Hello World"
+        "title": "-- Export to github library --"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "instalib.helloWorld",
+          "group": "navigation",
+          "when": "editorHasSelection"
+        }
+      ]
+    },
+    "configuration": { 
+      "type": "object",
+      "properties": {
+          "instalib.accessToken": {
+              "type": "string",
+              "default": ""
+          },
+          "instalib.owner": {
+              "type": "string",
+              "default": ""
+          },
+          "instalib.repo": {
+              "type": "string",
+              "default": ""
+          },
+          "instalib.filePath": {
+              "type": "string",
+              "default": ""
+          }
+      }
+  }
   },
+  "enabledApiProposals": [
+    "contribEditorContentMenu"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -28,14 +61,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.88.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.8",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
   }
 }
